@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Land.Views.LoginPage"
+             BackgroundColor="Black"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             Title="Login">
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout
+                Padding="20"
+                BackgroundColor="FloralWhite">
+            
+                <Label
+                    Font="Large"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="Lands"
+                    TextColor="DarkCyan"/>
+                <Image
+                    Margin="0,5,0,0"
+                    HorizontalOptions="Center"
+                    WidthRequest="300"
+                    Source="mundo.png">                
+                </Image>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="4*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label                
+                        Grid.Column="0"
+                        Grid.Row="0"                   
+                        FontAttributes="Bold"                
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        Text="E-mail:" 
+                        TextColor="DarkBlue"/>
+                    <Entry
+                        
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        Keyboard="Email"
+                        Placeholder="Enter your email..."
+                        TextColor="Black">
+                    </Entry>
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        FontAttributes="Bold"                
+                        VerticalOptions="Center"
+                        HorizontalOptions="EndAndExpand"
+                        Text="Password:" 
+                        TextColor="DarkBlue"/>
+                    <Entry
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        IsPassword="True"
+                        Placeholder="Enter your password..."
+                        TextColor="Black">
+                    </Entry>
+                </Grid>
+                <ActivityIndicator></ActivityIndicator>
+                <StackLayout 
+                    Orientation="Horizontal">
+                    <Label
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="Center"
+                        Text="Remember on this device  "
+                        TextColor="Black" />
+                    <Switch
+                        HorizontalOptions="End">                    
+                    </Switch>
+                </StackLayout>
+                <Label
+                        HorizontalOptions="Center"
+                        Text="Forgot your password...?"
+                        TextColor="Blue" />
+                <StackLayout
+                    Orientation="Horizontal">
+                    <Button
+                        BackgroundColor="DarkBlue"
+                        BorderRadius="20"
+                        HeightRequest="40"
+                        HorizontalOptions="EndAndExpand"
+                        Text="Login"
+                        TextColor="White">
+                    </Button>
+                    <Button
+                        BackgroundColor="DarkCyan"
+                        BorderRadius="20"
+                        HeightRequest="40"
+                        HorizontalOptions="StartAndExpand"
+                        Text="Register"
+                        TextColor="White">
+                    </Button>           
+                </StackLayout>
+                <Label
+                    Margin="0,10"
+                    Text="Login with:"
+                    HorizontalOptions="CenterAndExpand"
+                    TextColor="Black"/>
+                <StackLayout
+                        Orientation="Horizontal">
+                    <Image
+                        Source="facebook.png"
+                        HorizontalOptions="EndAndExpand"
+                        HeightRequest="75">
+                    </Image>
+                    <Image
+                        Source="google.png"
+                        HorizontalOptions="StartAndExpand"
+                        HeightRequest="75">
+                    </Image>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>    
+    </ContentPage.Content>
+</ContentPage>
